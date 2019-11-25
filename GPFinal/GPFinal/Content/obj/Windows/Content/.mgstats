@@ -1,0 +1,4 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Aidan/source/repos/GPFinal/GPFinal/Content/Arial.spritefont","C:/Users/Aidan/source/repos/GPFinal/GPFinal/Content/bin/Windows/Content/Arial.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21521,0.318025
+"C:/Users/Aidan/source/repos/GPFinal/GPFinal/Content/pacmanSingle.png","C:/Users/Aidan/source/repos/GPFinal/GPFinal/Content/bin/Windows/Content/pacmanSingle.xnb","TextureProcessor","Texture2DContent",2204,11533,0.0220021
+"C:/Users/Aidan/source/repos/GPFinal/GPFinal/Content/shot.png","C:/Users/Aidan/source/repos/GPFinal/GPFinal/Content/bin/Windows/Content/shot.xnb","TextureProcessor","Texture2DContent",426,1109,0.006999
