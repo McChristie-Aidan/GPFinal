@@ -25,11 +25,11 @@ namespace GPFinal
             this.Direction = Vector2.Zero;  //Start with no direction on each new upafet
 
             //No need to sum input only uses left and right
-            if (input.KeyboardState.IsKeyDown(Keys.Left))
+            if (input.KeyboardState.IsKeyDown(Keys.Left) || input.KeyboardState.IsKeyDown(Keys.A))
             {
                 this.Direction = new Vector2(-1, 0);
             }
-            if (input.KeyboardState.IsKeyDown(Keys.Right))
+            if (input.KeyboardState.IsKeyDown(Keys.Right) || input.KeyboardState.IsKeyDown(Keys.D))
             {
                 this.Direction = new Vector2(1, 0);
             }

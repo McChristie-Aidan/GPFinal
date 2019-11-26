@@ -1,5 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Aidan/source/repos/GPFinal/Spawner/Content/GhostHit.png","C:/Users/Aidan/source/repos/GPFinal/Spawner/Content/bin/Windows/Content/GhostHit.xnb","TextureProcessor","Texture2DContent",1158,11749,1.065085
-"C:/Users/Aidan/source/repos/GPFinal/Spawner/Content/PurpleGhost.png","C:/Users/Aidan/source/repos/GPFinal/Spawner/Content/bin/Windows/Content/PurpleGhost.xnb","TextureProcessor","Texture2DContent",1368,11749,0.018002
-"C:/Users/Aidan/source/repos/GPFinal/Spawner/Content/RedGhost.png","C:/Users/Aidan/source/repos/GPFinal/Spawner/Content/bin/Windows/Content/RedGhost.xnb","TextureProcessor","Texture2DContent",1193,11533,0.0190011
-"C:/Users/Aidan/source/repos/GPFinal/Spawner/Content/TealGhost.png","C:/Users/Aidan/source/repos/GPFinal/Spawner/Content/bin/Windows/Content/TealGhost.xnb","TextureProcessor","Texture2DContent",1317,11533,0.0210001
+"C:/Workspace/src/GPFinal/GPFinal/Spawner/Content/GhostHit.png","C:/Workspace/src/GPFinal/GPFinal/Spawner/Content/bin/Windows/Content/GhostHit.xnb","TextureProcessor","Texture2DContent",1158,11749,0.1420092
+"C:/Workspace/src/GPFinal/GPFinal/Spawner/Content/PurpleGhost.png","C:/Workspace/src/GPFinal/GPFinal/Spawner/Content/bin/Windows/Content/PurpleGhost.xnb","TextureProcessor","Texture2DContent",1368,11749,0.012004
+"C:/Workspace/src/GPFinal/GPFinal/Spawner/Content/RedGhost.png","C:/Workspace/src/GPFinal/GPFinal/Spawner/Content/bin/Windows/Content/RedGhost.xnb","TextureProcessor","Texture2DContent",1193,11533,0.0110038
+"C:/Workspace/src/GPFinal/GPFinal/Spawner/Content/TealGhost.png","C:/Workspace/src/GPFinal/GPFinal/Spawner/Content/bin/Windows/Content/TealGhost.xnb","TextureProcessor","Texture2DContent",1317,11533,0.0160043

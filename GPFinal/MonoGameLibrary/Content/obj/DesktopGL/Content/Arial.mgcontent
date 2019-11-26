@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Aidan/source/repos/GPFinal/MonoGameLibrary/Content/Arial.spritefont</SourceFile>
-  <SourceTime>2019-10-09T12:36:02.5783147-05:00</SourceTime>
-  <DestFile>C:/Users/Aidan/source/repos/GPFinal/MonoGameLibrary/Content/bin/DesktopGL/Content/Arial.xnb</DestFile>
-  <DestTime>2019-11-23T16:33:16.9271738-06:00</DestTime>
+  <SourceFile>C:/Workspace/src/GPFinal/GPFinal/MonoGameLibrary/Content/Arial.spritefont</SourceFile>
+  <SourceTime>2019-11-25T18:39:52.7444153-06:00</SourceTime>
+  <DestFile>C:/Workspace/src/GPFinal/GPFinal/MonoGameLibrary/Content/bin/DesktopGL/Content/Arial.xnb</DestFile>
+  <DestTime>2019-11-25T18:41:57.882831-06:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2019-07-19T12:50:46-05:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

@@ -4,8 +4,8 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Aidan/source/repos/GPFinal/MonoGameLibrary/Content/Arial.spritefont</File>
-    <File>C:/Users/Aidan/source/repos/GPFinal/MonoGameLibrary/Content/SpriteMarker.png</File>
+    <File>C:/Workspace/src/GPFinal/GPFinal/MonoGameLibrary/Content/Arial.spritefont</File>
+    <File>C:/Workspace/src/GPFinal/GPFinal/MonoGameLibrary/Content/SpriteMarker.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

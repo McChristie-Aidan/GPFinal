@@ -4,9 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Aidan/source/repos/GPFinal/GPFinal/Content/Arial.spritefont</File>
-    <File>C:/Users/Aidan/source/repos/GPFinal/GPFinal/Content/pacmanSingle.png</File>
-    <File>C:/Users/Aidan/source/repos/GPFinal/GPFinal/Content/shot.png</File>
+    <File>C:/Workspace/src/GPFinal/GPFinal/GPFinal/Content/Arial.spritefont</File>
+    <File>C:/Workspace/src/GPFinal/GPFinal/GPFinal/Content/pacmanSingle.png</File>
+    <File>C:/Workspace/src/GPFinal/GPFinal/GPFinal/Content/shot.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

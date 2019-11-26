@@ -20,7 +20,7 @@ namespace GPFinal
 
         public override void Update(GameTime gameTime)
         {
-            if (input.KeyboardState.HasReleasedKey(Microsoft.Xna.Framework.Input.Keys.Space))
+            if (input.KeyboardState.HasReleasedKey(Keys.Space))
             {
                 Shot s = new Shot(this.Game);
                 s.Location = this.Location;
@@ -28,12 +28,13 @@ namespace GPFinal
                 s.Direction = ((this.Direction / 5) + new Vector2(0, -1));
                 SM.Shoot(s);
             }
-            if (input.KeyboardState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.B))
+            // maybe put a different kind of shot here
+            if (input.KeyboardState.IsKeyDown(Keys.B))
             {
                 Shot s = new Shot(this.Game);
                 s.Location = this.Location;
                 s.Speed = 600;
-                s.Direction = (this.Direction + new Vector2(0, -1));
+                s.Direction = ((this.Direction / 5) + new Vector2(0, -1));
                 SM.Shoot(s);
             }
 
