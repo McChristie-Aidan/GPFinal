@@ -17,6 +17,7 @@ namespace GPFinal
         InputHandler input;
         PlayerShoot PS;
         GhostSpawner spawner;
+        ScoreManager score;
         
         Shot s;
 
@@ -27,6 +28,11 @@ namespace GPFinal
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            StartGame();
+        }
+
+        public void StartGame()
+        {          
             gameState = GameState.Playing;
 
             input = new InputHandler(this);
@@ -38,6 +44,8 @@ namespace GPFinal
             PS = new PlayerShoot(this);
             this.Components.Add(PS);
 
+            score = new ScoreManager(this);
+            this.Components.Add(score);
         }
 
         protected override void Initialize()
@@ -79,8 +87,18 @@ namespace GPFinal
                                 if (((Ghost.MonogameGhost)gc).PerPixelCollision(s))
                                 {
                                     gc.Enabled = false;
+                                    s.Visible = false;
                                     s.Enabled = false;
                                 }
+                            }
+                        }
+
+                        if (((Ghost.MonogameGhost)gc).Intersects(PS));
+                        {
+                            if (((Ghost.MonogameGhost)gc).PerPixelCollision(PS))
+                            {
+                                ScoreManager.Lives -= 1;
+                                gc.Enabled = false;
                             }
                         }
                     }

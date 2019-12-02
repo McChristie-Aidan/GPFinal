@@ -4,10 +4,10 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Workspace/src/GPFinal/GPFinal/Spawner/Content/GhostHit.png</File>
-    <File>C:/Workspace/src/GPFinal/GPFinal/Spawner/Content/RedGhost.png</File>
-    <File>C:/Workspace/src/GPFinal/GPFinal/Spawner/Content/TealGhost.png</File>
-    <File>C:/Workspace/src/GPFinal/GPFinal/Spawner/Content/PurpleGhost.png</File>
+    <File>C:/Users/Aidan/Github/GPFinal/GPFinal/Spawner/Content/GhostHit.png</File>
+    <File>C:/Users/Aidan/Github/GPFinal/GPFinal/Spawner/Content/RedGhost.png</File>
+    <File>C:/Users/Aidan/Github/GPFinal/GPFinal/Spawner/Content/TealGhost.png</File>
+    <File>C:/Users/Aidan/Github/GPFinal/GPFinal/Spawner/Content/PurpleGhost.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
