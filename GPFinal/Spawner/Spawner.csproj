@@ -38,8 +38,6 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
     <Compile Include="Diagram.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GhostSpawner.cs" />
@@ -77,6 +75,10 @@
     <ProjectReference Include="..\MonoGameLibrary\MonoGameLibrary.csproj">
       <Project>{aad7c5c6-aa67-45c6-8b7c-22906fa79e9e}</Project>
       <Name>MonoGameLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShotHandler\ShotHandler.csproj">
+      <Project>{a0812ac3-2c5f-4fd3-8139-3014d6b90cc1}</Project>
+      <Name>ShotHandler</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -69,8 +69,11 @@ namespace MonoGameLibrary.Util
             this.allowsExiting = allowsExiting;
 
             //Add IInputHandler as Game Service the constructor of this class added the class as a service
-            game.Services.AddService(typeof(IInputHandler), this);
-            
+            if (game.Services.GetService<IInputHandler>() == null)
+            {
+                game.Services.AddService(typeof(IInputHandler), this);
+            }
+
             //initialize our local member fields
             keyboard = new KeyboardHandler();
 

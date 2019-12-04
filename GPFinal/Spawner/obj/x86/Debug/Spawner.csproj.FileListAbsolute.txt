@@ -157,3 +157,5 @@ C:\Users\Aidan\Github\GPFinal\GPFinal\Spawner\obj\x86\Debug\Spawner.csproj.CoreC
 C:\Users\Aidan\Github\GPFinal\GPFinal\Spawner\obj\x86\Debug\Spawner.csproj.CopyComplete
 C:\Users\Aidan\Github\GPFinal\GPFinal\Spawner\obj\x86\Debug\Spawner.exe
 C:\Users\Aidan\Github\GPFinal\GPFinal\Spawner\obj\x86\Debug\Spawner.pdb
+C:\Users\Aidan\Github\GPFinal\GPFinal\Spawner\bin\Windows\x86\Debug\ShotHandler.exe
+C:\Users\Aidan\Github\GPFinal\GPFinal\Spawner\bin\Windows\x86\Debug\ShotHandler.pdb

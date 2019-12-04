@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using MonoGameLibrary.Sprite;
 using MonoGameLibrary.Util;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +12,8 @@ namespace Ghost
 {
     public class MonogameGhost : DrawableSprite
     {
+        public ShotHandler.ShotManager SM;
+
         protected GameConsoleGhost ghost;
         public GameConsoleGhost Ghost
         {
@@ -23,12 +24,14 @@ namespace Ghost
         public Texture2D ghostHit;
         public Texture2D ghostTexture;
         public string strGhostTexture;
+        public bool hasShot;
 
         Random r;
 
         public MonogameGhost(Game game)
             : base(game)
         {
+            SM = (ShotHandler.ShotManager)game.Services.GetService(typeof(ShotHandler.IShotHandler));
             this.ghost = new GameConsoleGhost((GameConsole)game.Services.GetService<IGameConsole>());    
             strGhostTexture = "RedGhost";
             this.ghost.State = GhostState.Roving;
@@ -50,7 +53,7 @@ namespace Ghost
 
         protected override void LoadContent()
         {
-
+            hasShot = false;
             this.ghostTexture = this.Game.Content.Load<Texture2D>(strGhostTexture);
             this.ghostHit = this.Game.Content.Load<Texture2D>("GhostHit");
             this.spriteTexture = ghostTexture;
@@ -67,8 +70,6 @@ namespace Ghost
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public override void Update(GameTime gameTime)
         {
-            
-
             switch (this.ghost.State)
             {
                 case GhostState.Dead:
@@ -132,7 +133,16 @@ namespace Ghost
             //    this.ghost.State = GhostState.Roving;
             //}
 
-            
+            //if (hasShot == false  && this.Location.Y >= this.GraphicsDevice.Viewport.Height / 7)
+            //{
+            //    hasShot = true;
+            //    ShotHandler.Shot s = new ShotHandler.Shot(this.Game);
+            //    s.Location = this.Location;
+            //    s.Speed = 250;
+            //    s.Direction = - this.Location;
+            //    Direction.Normalize();
+            //    SM.EnemyShoot(s);
+            //}
 
             base.Update(gameTime);
         }

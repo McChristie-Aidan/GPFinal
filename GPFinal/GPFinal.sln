@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGameLibrary", "MonoGame
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spawner", "Spawner\Spawner.csproj", "{B46D7C37-C17D-4CB5-9D7D-4FFB6BFB2C90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShotHandler", "ShotHandler\ShotHandler.csproj", "{A0812AC3-2C5F-4FD3-8139-3014D6B90CC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Player", "Player\Player.csproj", "{2C2BFAB3-A2EE-47F1-A1CD-0D8832FEB50C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -27,6 +31,14 @@ Global
 		{B46D7C37-C17D-4CB5-9D7D-4FFB6BFB2C90}.Debug|x86.Build.0 = Debug|x86
 		{B46D7C37-C17D-4CB5-9D7D-4FFB6BFB2C90}.Release|x86.ActiveCfg = Release|x86
 		{B46D7C37-C17D-4CB5-9D7D-4FFB6BFB2C90}.Release|x86.Build.0 = Release|x86
+		{A0812AC3-2C5F-4FD3-8139-3014D6B90CC1}.Debug|x86.ActiveCfg = Debug|x86
+		{A0812AC3-2C5F-4FD3-8139-3014D6B90CC1}.Debug|x86.Build.0 = Debug|x86
+		{A0812AC3-2C5F-4FD3-8139-3014D6B90CC1}.Release|x86.ActiveCfg = Release|x86
+		{A0812AC3-2C5F-4FD3-8139-3014D6B90CC1}.Release|x86.Build.0 = Release|x86
+		{2C2BFAB3-A2EE-47F1-A1CD-0D8832FEB50C}.Debug|x86.ActiveCfg = Debug|x86
+		{2C2BFAB3-A2EE-47F1-A1CD-0D8832FEB50C}.Debug|x86.Build.0 = Debug|x86
+		{2C2BFAB3-A2EE-47F1-A1CD-0D8832FEB50C}.Release|x86.ActiveCfg = Release|x86
+		{2C2BFAB3-A2EE-47F1-A1CD-0D8832FEB50C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

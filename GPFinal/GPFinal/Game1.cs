@@ -3,6 +3,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGameLibrary.Util;
 using Spawner;
+using Player;
+using ShotHandler;
 
 namespace GPFinal
 {
@@ -18,6 +20,7 @@ namespace GPFinal
         PlayerShoot PS;
         GhostSpawner spawner;
         ScoreManager score;
+        ShotManager SM;
         
         Shot s;
 
@@ -29,23 +32,6 @@ namespace GPFinal
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             StartGame();
-        }
-
-        public void StartGame()
-        {          
-            gameState = GameState.Playing;
-
-            input = new InputHandler(this);
-            this.Components.Add(input);
-
-            spawner = new Spawner.GhostSpawner(this);
-            this.Components.Add(spawner);
-
-            PS = new PlayerShoot(this);
-            this.Components.Add(PS);
-
-            score = new ScoreManager(this);
-            this.Components.Add(score);
         }
 
         protected override void Initialize()
@@ -73,37 +59,15 @@ namespace GPFinal
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            //colision checking. technical debt
-            foreach (GameComponent gc in Components)
-            {
-                if (gc is Ghost.MonogameGhost)
-                {
-                    if (((Ghost.MonogameGhost)gc).Enabled == true)
-                    {
-                        foreach (Shot s in PS.SM.Shots)
-                        {
-                            if (((Ghost.MonogameGhost)gc).Intersects(s))
-                            {
-                                if (((Ghost.MonogameGhost)gc).PerPixelCollision(s))
-                                {
-                                    gc.Enabled = false;
-                                    s.Visible = false;
-                                    s.Enabled = false;
-                                }
-                            }
-                        }
+            //collision checking. Technical debt
+            CheckCollision();
 
-                        if (((Ghost.MonogameGhost)gc).Intersects(PS));
-                        {
-                            if (((Ghost.MonogameGhost)gc).PerPixelCollision(PS))
-                            {
-                                ScoreManager.Lives -= 1;
-                                gc.Enabled = false;
-                            }
-                        }
-                    }
-                }
-            }
+            //Shoot of the ghosts. its here because the shots need access to the players location. Technical debt
+            GhostsShoot();
+
+            //Checks for when to reset game.
+            CheckForDeath();
+
             base.Update(gameTime);
         }
 
@@ -114,6 +78,128 @@ namespace GPFinal
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+        }
+
+        private void CheckForDeath()
+        {
+            if (ScoreManager.Lives <= 0 || gameState == GameState.GameOver || input.WasKeyPressed(Keys.P))
+            {
+                PS.ResetPlayerShoot();
+                SM.ResetShotManager();
+                spawner.ResetGhostSpawner();
+                score.ResetScoreManager();
+            }
+        }
+
+        private void GhostsShoot()
+        {
+            foreach (Ghost.MonogameGhost g in spawner.Ghosts)
+            {
+                if (g.hasShot == false && g.Location.Y >= this.GraphicsDevice.Viewport.Height / 7)
+                {
+                    g.hasShot = true;
+                    ShotHandler.Shot s = new ShotHandler.Shot(this);
+                    s.Location = g.Location;
+                    s.Speed = 250;
+                    s.Direction = PS.Location - g.Location;
+                    s.Direction.Normalize();
+                    SM.EnemyShoot(s);
+                }
+            }
+        }
+
+        public void StartGame()
+        {
+            gameState = GameState.Playing;
+
+            SM = new ShotManager(this);
+            this.Components.Add(SM);
+
+            input = new InputHandler(this);
+            this.Components.Add(input);
+
+            spawner = new GhostSpawner(this);
+            this.Components.Add(spawner);
+
+            PS = new PlayerShoot(this);
+            this.Components.Add(PS);
+
+            score = new ScoreManager(this);
+            this.Components.Add(score);
+        }
+
+        private void CheckCollision()
+        {
+            //colision checking. technical debt
+
+            //Ghost collision
+            foreach (Ghost.MonogameGhost gc in spawner.Ghosts)
+            {
+                if (gc.Enabled == true)
+                {
+                    //enemy on player bullet
+                    foreach (ShotHandler.Shot s in SM.Shots)
+                    {
+                        if (gc.Intersects(s))
+                        {
+                            if (gc.PerPixelCollision(s))
+                            {
+                                gc.Visible = false;
+                                gc.Enabled = false;
+                                ScoreManager.Score += 10;
+                                ScoreManager.EnemiesKilled += 1;
+                                s.Visible = false;
+                                s.Enabled = false;
+                            }
+                        }
+                    }
+
+                    //enemy on player
+                    if (gc.Intersects(PS))
+                    {
+                        if (gc.PerPixelCollision(PS))
+                        {
+                            ScoreManager.Lives -= 1;
+                            gc.Visible = false;
+                            gc.Enabled = false;
+                        }
+                    }
+                }
+            }
+
+            //enemy bullet collision
+            foreach (ShotHandler.Shot shot in SM.EnemyShots)
+            {
+                if(shot.Enabled == true)
+                {
+                    //enemy bullet on player bullet
+                    foreach (ShotHandler.Shot s in SM.Shots)
+                    {
+                        if (shot.Intersects(s))
+                        {
+                            if (shot.PerPixelCollision(s))
+                            {
+                                shot.Visible = false;
+                                shot.Enabled = false;
+                                ScoreManager.Score += 5;
+                                s.Visible = false;
+                                s.Enabled = false;
+                            }
+                        }
+                    }
+
+                    //enemy bullet on player
+                    if (shot.Intersects(PS))
+                    {
+                        if (shot.PerPixelCollision(PS))
+                        {
+                            ScoreManager.Lives -= 1;
+                            shot.Visible = false;
+                            shot.Enabled = false;
+                        }
+                    }
+                }
+            }
         }
     }
 }

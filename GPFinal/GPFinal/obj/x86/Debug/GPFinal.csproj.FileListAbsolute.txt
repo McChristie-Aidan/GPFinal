@@ -70,3 +70,7 @@ C:\Users\Aidan\Github\GPFinal\GPFinal\GPFinal\obj\x86\Debug\GPFinal.csproj.CoreC
 C:\Users\Aidan\Github\GPFinal\GPFinal\GPFinal\obj\x86\Debug\GPFinal.csproj.CopyComplete
 C:\Users\Aidan\Github\GPFinal\GPFinal\GPFinal\obj\x86\Debug\GPFinal.exe
 C:\Users\Aidan\Github\GPFinal\GPFinal\GPFinal\obj\x86\Debug\GPFinal.pdb
+C:\Users\Aidan\Github\GPFinal\GPFinal\GPFinal\bin\Windows\x86\Debug\ShotHandler.exe
+C:\Users\Aidan\Github\GPFinal\GPFinal\GPFinal\bin\Windows\x86\Debug\ShotHandler.pdb
+C:\Users\Aidan\Github\GPFinal\GPFinal\GPFinal\bin\Windows\x86\Debug\Player.exe
+C:\Users\Aidan\Github\GPFinal\GPFinal\GPFinal\bin\Windows\x86\Debug\Player.pdb

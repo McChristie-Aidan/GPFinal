@@ -42,14 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Game1.cs" />
-    <Compile Include="PlayerController.cs" />
-    <Compile Include="PlayerShip.cs" />
-    <Compile Include="PlayerShoot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScoreManager.cs" />
-    <Compile Include="Shot.cs" />
-    <Compile Include="ShotManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -69,6 +64,14 @@
     <ProjectReference Include="..\MonoGameLibrary\MonoGameLibrary.csproj">
       <Project>{aad7c5c6-aa67-45c6-8b7c-22906fa79e9e}</Project>
       <Name>MonoGameLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Player\Player.csproj">
+      <Project>{2c2bfab3-a2ee-47f1-a1cd-0d8832feb50c}</Project>
+      <Name>Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShotHandler\ShotHandler.csproj">
+      <Project>{a0812ac3-2c5f-4fd3-8139-3014d6b90cc1}</Project>
+      <Name>ShotHandler</Name>
     </ProjectReference>
     <ProjectReference Include="..\Spawner\Spawner.csproj">
       <Project>{b46d7c37-c17d-4cb5-9d7d-4ffb6bfb2c90}</Project>
